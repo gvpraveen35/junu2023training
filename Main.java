@@ -1,16 +1,28 @@
-import java.util.*;
+import java.util.Scanner;
 class Main
 {
+static int x=0;
+public static void printPattern(int n)
+{
+for(int i=0;x<=n;i++)
+{
+printLine(i);
+System.out.println();
+}
+}
+public static void printLine(int stop)
+{
+for(int i=0;i<=stop;i++)
+{
+System.out.print(x++);
+if(i<stop)
+System.out.print(",");
+}
+}
 public static void main(String args[])
 {
-//creat array
-int[] age={12,4,5,6,7};
-//access each array ela
-System.out.println("eaxcc the element ");
-System.out.println(age[0]);
-System.out.println(age[1]);
-System.out.println(age[2]);
-System.out.println(age[3]);
-System.out.println(age[4]);
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+printPattern(n);
 }
 }
