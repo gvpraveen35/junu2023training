@@ -1,28 +1,20 @@
-import java.util.Scanner;
 class Main
 {
-static int x=0;
-public static void printPattern(int n)
-{
-for(int i=0;x<=n;i++)
-{
-printLine(i);
-System.out.println();
-}
-}
-public static void printLine(int stop)
-{
-for(int i=0;i<=stop;i++)
-{
-System.out.print(x++);
-if(i<stop)
-System.out.print(",");
-}
-}
 public static void main(String args[])
+
 {
-Scanner sc=new Scanner(System.in);
-int n=sc.nextInt();
-printPattern(n);
+try
+{
+int arr[]={1,2,3,4,5};
+System.out.println(arr[10]);
+}
+catch(ArrayIndexOutOfBoundsException e)
+{
+System.out.println("ArrayIndexOutOfBoundsException");
+}
+finally
+{
+System.out.println("finally block");
+}
 }
 }

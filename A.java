@@ -1,26 +1,17 @@
-import java.util.*;
-class  B
+interface printable
 {
-A obj;
-B(A obj)
-{
-this.obj=obj;
+void print();
 }
-void display()
+class A implements printable
 {
-System.out.println(obj.data);
-}
-}
-class A
+public void print()
 {
-int data=10;
-A()
-{
-B b=new B(this);//B b=new B(a);
-b.display();
+System.out.println("Hello");
 }
+
 public static void main(String args[])
 {
-A a=new A();
+A obj=new A();
+obj.print();
 }
 }

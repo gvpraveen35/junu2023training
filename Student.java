@@ -1,12 +1,17 @@
-import java.util.*;
-class Student
+class Person
 {
-int id;
-String s;
+protected String fname="john";
+protected String lname="Doe";
+protected int age=24;
+}
+class Student extends Person
+{
+private int graduationYear=2018;
 public static void main(String args[])
 {
-Student s1=new Student();
-System.out.println(s1.id);
-System.out.println(s1.s);
+Student myObj=new Student();
+System.out.println("Name:"+myObj.fname+""+myObj.lname);
+System.out.println("Age:"+myObj.age);
+System.out.println("Graduation Year:"+myObj.graduationYear);
 }
 }
